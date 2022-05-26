@@ -1,7 +1,7 @@
 # 运行方式 1: 使用软件 netcat
 命令行:
 ```shell
-./03_clock &
+./clock &
 nc localhost 8080
 ```
 ```shell
@@ -14,14 +14,14 @@ nc localhost 8080
 停止方式：
 ```shell
 ^C
-killall 03_clock
+killall clock
 ```
 
 
 # 运行方式 2: 使用go - net.Dial
 命令行:	
 ```shell
-./03_clock &
+./clock &
 ./netcat1
 ```
 ```shell
@@ -35,5 +35,5 @@ killall 03_clock
 停止方式： 
 ```shell
 ^C
-killall 03_clock
+killall clock
 ```

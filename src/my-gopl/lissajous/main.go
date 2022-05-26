@@ -1,7 +1,7 @@
 // Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-// Run with "web" command-line argument for web server.
+// Run with "web" command-line argument for web gin-demo.
 // See page 13.
 //!+main
 

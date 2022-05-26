@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-learning/src/06_search/search"
+	"go-learning/src/algorithm/search/search"
 )
 
 var (

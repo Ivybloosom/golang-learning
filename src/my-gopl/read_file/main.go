@@ -14,7 +14,7 @@ import (
 
 func main() {
 
-	fileName := "src/my_gopl/read_file/test.txt"
+	fileName := "src/my-gopl/read_file/test.txt"
 	file, err := os.Open(fileName)
 	if err != nil {
 		fmt.Println(err)
