@@ -1,6 +1,7 @@
 # notes of golang
 
 ---
+### 学习 go 的时候做的一些小 demo，方便自己需要的时候查阅
 
 ### go get报错 i/o timeout的解决办法
 
@@ -13,5 +14,5 @@ Go1.11新增的环境变量，如果设置了此环境变量，那么在下载�
 export GO111MODULE=on
 // 配置 GOPROXY 环境变量
 export GOPROXY="https://goproxy.io"
+export GOPROXY="https://goproxy.cn"
 ```
-
