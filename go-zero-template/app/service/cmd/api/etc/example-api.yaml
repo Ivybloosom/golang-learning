@@ -1,0 +1,14 @@
+Name: example-api
+Host: 0.0.0.0
+Port: 8888
+
+# mongo配置
+Mongodb:
+  Uri: "mongodb://localhost:27017"
+  Db: "test"
+  MaxPoolSize: 2000
+
+## jwt配置
+#Auth:
+#  AccessSecret: 63AB37EA-748C-1E44-E268-B778B3DB616F
+#  AccessExpire: 259200 #72h

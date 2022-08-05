@@ -1,0 +1,63 @@
+syntax = "v1"
+
+info(
+	title: "示例模块"
+	desc: "api文件编写示例"
+	author: "Ivy"
+	create_time: "2022-7-21"
+	version: "1.0"
+)
+type (
+	// 查一条
+	userRetrieveOneReq {
+		Id string `path:"id"`
+	}
+	userRetrieveOneResp {
+		Code int               `json:"code"`
+		Msg  string            `json:"msg"`
+		User map[string]string `json:"data"`
+	}
+
+	// 查全部
+	userRetrieveAllReq struct{}
+
+	userRetrieveAllResp {
+		Code  int                 `json:"code"`
+		Msg   string              `json:"msg"`
+		Users []map[string]string `json:"data"`
+	}
+
+	// 增一条
+	userAddOneReq {
+		User map[string]string `json:"add"`
+	}
+
+	userAddOneResp {
+		Code int    `json:"code"`
+		Msg  string `json:"msg"`
+	}
+)
+
+// 需要鉴权
+//@server(
+//	group: user
+//	jwt: Auth
+//)
+
+// 不需要鉴权
+@server(
+	group: user
+)
+service example-api {
+	// 查一条
+	@handler userRetrieveOneHandle
+	get /user/getuser/:id(userRetrieveOneReq) returns (userRetrieveOneResp)
+	
+	// 查全部
+	@handler userRetrieveAllHandle
+	get /user/getalluser(userRetrieveAllReq) returns (userRetrieveAllResp)
+	
+	// 增一条
+	@handler userAddOneHandle
+	post /user/add(userAddOneReq) returns(userAddOneResp)
+}
