@@ -26,8 +26,7 @@ func newDefaultUserModel(conn *mon.Model) *defaultUserModel {
 }
 
 func (m *defaultUserModel) Insert(ctx context.Context, data *User) error {
-	if !data.ID.IsZero() {
-		data.ID = primitive.NewObjectID()
+	if data.ID != 0 {
 		data.CreateAt = time.Now()
 		data.UpdateAt = time.Now()
 	}
